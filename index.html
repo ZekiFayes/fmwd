@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Flow Matching for Thermal-Driven Wood Design">
+  <meta name="keywords" content="Flow Matching, Wood Materials">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flow Matching for Thermal-Driven Wood Design</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script 
+    async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL">
+  </script>
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script src="./static/js/bibliography.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Flow Matching for Thermal-Driven Wood Design</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <span>Jingren Xie</span><sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technical University of Denmark,</span>
+            <span class="author-block"><sup>2</sup>Pioneer Centre for AI</span>
+          </div>
+
+          <!-- <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./static/pdf/WoodInsight.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PDF</span>
+                </a>
+              </span>
+              </div>
+            </div> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/overview.svg" alt="Teaser Framework" style="width: 100%; height: auto; border-radius: 10px;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">The Overview of Flow Matching for Thermal-Driven Wood Design.
+      </h2>
+
+      <img src="./static/images/gen_0024.svg" alt="Teaser Framework" style="width: 100%; height: auto; border-radius: 10px;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">The Results of Flow Matching for Thermal-Driven Wood Design Using DINOv3 ViT-S, ViT-B,and ViT-L.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The thermal behavior of wood is a critical factor in advanced material assembly.
+            However, pixel-level thermal analysis remains fundamentally constrained by the low resolution and noise inherent to infrared thermography.
+            To address this, we introduce an end-to-end computational framework that synthesizes high-resolution thermal responses directly from standard RGB images.
+            We first establish a core physical linkage: because spatial color variation in natural wood is driven by cellular anatomy, optical intensity serves as a reliable geometric proxy for the localized solid volume fraction.
+            Through leveraging this theoretical insight, we develop an automated finite-element-method data engine that maps pixel-level optical intensity to a 3D thermodynamic voxel grid, generating high-fidelity synthetic thermal responses. 
+            We find that 1) when the thermal conductivity along the thickness direction is uniform or linear, wood RGB images and their corresponding thermal responses exhibit extreme morphological similarities, and the lateral diffusion acts as a low-pass filter that smooths out high-frequency details; 2) when the thermal conductivity along the thickness direction is random, such morphological similarities are destroyed, and wood's 3D structure dominantly governs its thermal response.
+            We further utilize these synthetic thermal responses to supervise a neural surrogate model built upon the DINOv3 foundation model. 
+            Our results demonstrate that the neural surrogate model successfully internalizes the governing thermodynamic laws, thereby bypassing computationally expensive simulations and enabling high-resolution thermal inference. 
+            This methodology effectively bridges the semantic and thermodynamic domains, unlocking systematic, pixel-level analysis of fine-grained wood thermal performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Introduction</h2>
+        <p>  
+          In computational materials science, the ultimate objective of material engineering is the reverse: discovering a structure that yields expected physical properties <cite data-ref="bastek2023inverse"></cite>, <cite data-ref="zhao2023scalable"></cite>, i.e., inverse material design.
+          In the context of bio-inspired materials like wood, current research has explored propositional design processes on two-dimensional surfaces with mono-modal thermal properties <cite data-ref="fragkia2023thermodynamic"></cite> and has gained more foundational knowledge of wood thermal behavior <cite data-ref="xie2026physics"></cite>.
+          To advance this design process further, we tackle this inverse wood design challenge by reversing the conventional structure-property-behavior pipeline, i.e., thermal-driven wood design, which translates wood thermal behavior to its structure. 
+          Specifically, our motivation is to map a targeted two-dimensional spatial thermal response directly back to its structural representation, generating a high-fidelity wood design.
+        </p>
+
+        <p>
+          Recently, generative models, such as diffusion <cite data-ref="ho2020denoising"></cite>, <cite data-ref="song2020score"></cite> and flow matching <cite data-ref="lipman2022flow"></cite>, <cite data-ref="liu2022flow"></cite>, <cite data-ref="albergo2022building"></cite> models, have achieved unprecedented success in computer vision, revolutionizing open-domain image synthesis <cite data-ref="ho2020denoising"></cite>, <cite data-ref="rombach2022high"></cite>.
+          Despite these breakthroughs, their translation into the domain of inverse material design—specifically wood design—remains critically underexplored.
+          The mapping from a thermal response to a physical wood structure is fundamentally an ill-posed, one-to-many problem, as multiple complex microscopic structures can exhibit identical macroscopic thermal footprints. 
+          Furthermore, while standard generative models excel at producing visually realistic images, they often rely on latent-space compression <cite data-ref="rombach2022high"></cite>, <cite data-ref="podell2024sdxl"></cite>, <cite data-ref="esser2024scaling"></cite>, <cite data-ref="labs2025flux"></cite> that inevitably blurs fine-grained physical boundaries. 
+          Consequently, a robust generative pipeline tailored to the rigid physical constraints of wood design is still lacking.
+        </p>
+
+        <p>
+          To bridge this gap, we frame the thermal-driven wood design process as a conditional generative task. 
+          We introduce an optimal transport flow matching framework capable of synthesizing physically viable wood designs conditioned entirely on target thermal layouts.
+          We explore leveraging pixel-space diffusion transformers (i.e., Just Image Transformers (JiT) <cite data-ref="li2026back"></cite> and Pixel Diffusion Transformers (PixelDiT) <cite data-ref="yu2026pixeldit"></cite>) to generate wood designs guided by DINOv3 semantic features.
+          By establishing a deterministic probability flow guided by foundation vision models, our approach empowers users to specify a desired spatial thermal response and computationally generate the exact micro-structural wood patterns required to realize that wood thermal behavior in the physical world.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Simulation Results</h2>
+
+        <h3 class="title is-4">Different Thermal Diffusion</h3>
+        <div class="content has-text-justified">
+          <p>
+            Parametric ablation study of thermal diffusion. 
+            The top and middle rows display the original optical RGB image and the corresponding simulated steady-state surface temperature maps under various diffusion coefficients (&alpha;, &beta;).
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/alpha_beta_visualization.svg" alt="Experimental Setup" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px;">
+        </div>
+        <br/>
+
+        <h3 class="title is-4">Different Thermal Conductivity Distribution along the Thickness Direction</h3>
+        <div class="content has-text-justified">
+          <p>
+            Wood internal heat transfer profiles mapping the temperature gradients from the bottom thermal boundary (50&deg;C) to the top surface.
+            The uniform and linear k<sub>z</sub> distributions (left and center columns) facilitate relatively continuous vertical heat conduction. 
+            In contrast, the randomly stratified distributions (right column) disrupt direct pathways, introducing tortuous thermal flow and non-linear temperature drops across the wood thickness.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/Thermal_Pipeline_3D.svg" alt="Wood Samples" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px;">
+        </div>
+        <br/>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Potential Applications</h2>
+
+        <h3 class="title is-4">Neural Surrogate Model</h3>
+        <div class="content has-text-justified">
+          <p>
+            We leverage this synthesized paired dataset to supervise a DINOv3-based encoder-decoder architecture, enabling direct prediction of the thermal responses from the RGB images.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/prediction.svg" alt="Experimental Setup" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px;">
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/sample_0150.svg" alt="Experimental Setup" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px;">
+        </div>
+        <br/>
+
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+    <!-- Dataset -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">References</h2>
+        <div id="bibliography"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre>
+      <code>@misc{xie2026synthesizing,
+      title={Synthesizing High-Resolution Wood Thermal Responses from Optical Imagery}, 
+      author={Jingren Xie},
+      year={2026},
+      url={},
+      }
+      </code>
+    </pre>
+  </div>
+</section> -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
